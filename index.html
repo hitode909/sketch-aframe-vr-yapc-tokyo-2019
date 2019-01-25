@@ -2,16 +2,95 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, WebVR! • A-Frame</title>
-    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <title>VR YAPC Tokyo 2019</title>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+
+  <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
   </head>
   <body>
-    <a-scene background="color: #ECECEC">
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
-    </a-scene>
+    <a-scene>
+    <a-assets>
+      <img id="skyTexture" crossorigin src="https://farm8.staticflickr.com/7057/6839826366_a7c0be5220_h_d.jpg">
+    </a-assets>
+      <a-sky src="#skyTexture"></a-sky>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_mt-fuji.png?cachebuster=454972" position="-11 1 -13" transparent="true" width="7.54" height="3.64"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_tokyo-tower.png?cachebuster=454972" position="-8 1.5 -12" transparent="true" width="3.96" height="7.46"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_sun.png?cachebuster=454949" position="3.5 7 -11" transparent="true" width="3" height="3"></a-image>
+
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_building3.png?cachebuster=455005" position="0 0 -7" transparent="true" width="20.240" height="2.90"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_building2.png?cachebuster=455005" position="0 0 -6" transparent="true" width="20.240" height="2.90"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_building1.png?cachebuster=455070" position="0 0 -4" transparent="true" width="20.240" height="2.90"></a-image>
+
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_cloud1.png?cachebuster=455161" position="2 2.8 -1.9" transparent="true" width="0.448" height="0.110"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_cloud2.png?cachebuster=455161" position="1.7 1.3 -4" transparent="true" width="0.518" height="0.126"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_cloud2.png?cachebuster=455161" position="-2 1.5 -4" transparent="true" width="0.514" height="0.132"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_cloud4.png?cachebuster=455161" position="-1 2.0 -2" transparent="true" width="0.330" height="0.082"></a-image>
+
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_logo.png?cachebuster=455043" position="0 2 -1" transparent="true" width="0.810" height="0.214"></a-image>
+      <a-image src="https://yapcjapan.org/2019tokyo/assets/images/mv_venue.png?cachebuster=454988" position="0 1.7 -0.6" transparent="true" width="0.686" height="0.070"></a-image>
+
+      <a-entity geometry="primitive: box" width="3" height="8" depth="6" material="shader: html; target: table" position="0 2 1" rotation="0 0 0">
+      </a-entity>
+  </a-scene>
+        <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden;"><table style="background: white;"><thead><tr><th>時刻</th> <th>ホール</th><th>Room1</th><th>Room0</th></tr></thead> <tbody><tr><th>11:00 ~ 11:10</th> <td>Opening</td> <td colspan="2"></td></tr> <tr><th>11:10 ~ 11:20</th> <td colspan="3"></td></tr> <tr><th>11:20 ~ 11:40</th> <td rowspan="2" class=""><a>2019年冬のPerl</a> <span>(40min)</span><br>
+                        charsbar
+                      </td><td rowspan="1" class=""><a>型にはまらない型の話</a> <span>(20min)</span><br>
+                        Dan Kogai
+                      </td><td rowspan="1" class=""><a>チームが前に進み続けるために僕たちが考えたこと</a> <span>(20min)</span><br>
+                        papix
+                      </td> <!----></tr><tr><th>11:40 ~ 12:00</th> <!----><td rowspan="1" class=""><a>Perl 6 でのアプリケーション開発と実用</a> <span>(20min)</span><br>
+                        risou
+                      </td><td rowspan="1" class=""><a>私とOSS活動とPerl</a> <span>(20min)</span><br>
+                        前田隼輔
+                      </td> <!----></tr><tr><th>12:00 ~ 12:10</th> <!----><!----><!----> <td colspan="3"></td></tr><tr><th>12:10 ~ 12:50</th> <td rowspan="1" class=""><a>Perl to Go</a> <span>(40min)</span><br>
+                        xaicron
+                      </td><td rowspan="1" class=""><a>YAPC座談会</a> <span>(40min)</span><br>
+
+                      </td><td rowspan="1" class=""><a>メッセージングのプロトコル</a> <span>(40min)</span><br>
+                        加藤亮
+                      </td> <!----></tr><tr><th>12:50 ~ 13:05</th> <!----><!----><!----> <td colspan="3"></td></tr><tr><th>13:05 ~ 13:45</th> <td class=""><a>ランチスポンサーセッション</a> <span>(40min)</span><br>
+
+                      </td><td rowspan="1" class=""><a></a> <!----><br>
+
+                      </td><td rowspan="1" class=""><a></a> <!----><br>
+
+                      </td> <!----></tr><tr><th>13:45 ~ 14:00</th> <!----><!----><!----> <td colspan="3"></td></tr><tr><th>14:00 ~ 14:20</th> <td rowspan="2" class=""><a>GUEST: 大仲 能史</a> <span>(40min)</span><br>
+
+                      </td><td rowspan="2" class=""><a>Perl5の静的解析入門　機械と人間双方の歩み寄りによる平和編</a> <span>(40min)</span><br>
+                        macopy
+                      </td><td rowspan="1" class=""><a>綱渡りバッチ脱出大作戦</a> <span>(20min)</span><br>
+                        しんぺい a.k.a. 猫型蓄音機
+                      </td> <!----></tr><tr><th>14:20 ~ 14:40</th> <!----><!----><td rowspan="1" class=""><a>Wazuhを利用した大統一サーバ監査基盤</a> <span>(20min)</span><br>
+                        山下和彦
+                      </td> <!----></tr><tr><th>14:40 ~ 14:50</th> <!----><!----><!----> <td colspan="3"></td></tr><tr><th>14:50 ~ 15:10</th> <td rowspan="2" class=""><a>GUEST: 広木 大地</a> <span>(40min)</span><br>
+
+                      </td><td rowspan="1" class=""><a>PerlプログラムでPerlプログラムを修正する方法</a> <span>(20min)</span><br>
+                        Kang-min Liu
+                      </td><td rowspan="2" class=""><a>自前運用のZabbixからマネージド監視サービスMackerelへ - ソーシャルゲームタイトルのサーバ監視の移行事例</a> <span>(40min)</span><br>
+                        suzuki
+                      </td> <!----></tr><tr><th>15:10 ~ 15:30</th> <!----><td rowspan="1" class=""><a>レガシーPerlビルド 〜現代に蘇るPerl[1..5].0とPerl6〜</a> <span>(20min)</span><br>
+                        八雲アナグラ
+                      </td><!----> <!----></tr><tr><th>15:30 ~ 15:40</th> <!----><!----><!----> <td colspan="3"></td></tr><tr><th>15:40 ~ 16:00</th> <td rowspan="2" class=""><a>Perlでも分散トレーシングしたい！ - AWS::XRayによる解析とその実装</a> <span>(40min)</span><br>
+                        fujiwara
+                      </td><td rowspan="1" class=""><a>WebVRで作品を作って展示しよう</a> <span>(20min)</span><br>
+                        hitode909
+                      </td><td rowspan="1" class=""><a>ログにやさしいDB設計</a> <span>(20min)</span><br>
+                        fist0
+                      </td> <!----></tr><tr><th>16:00 ~ 16:20</th> <!----><td rowspan="1" class=""><a>実演 サーバレスPerl - 顔認識データを扱おう</a> <span>(20min)</span><br>
+                        わいとん
+                      </td><td rowspan="1" class=""><a>CPAN Module Hacks</a> <span>(20min)</span><br>
+                        akiym
+                      </td> <!----></tr><tr><th>16:20 ~ 16:30</th> <!----><!----><!----> <td colspan="3"></td></tr><tr><th>16:30 ~ 16:50</th> <td rowspan="1" class=""><a>ISUCON8予選問題作成の裏側</a> <span>(20min)</span><br>
+                        karupanerura
+                      </td><td rowspan="1" class=""><a>レガシーPerlと、Perlのこれから</a> <span>(20min)</span><br>
+                        teckl
+                      </td><td rowspan="2" class=""><a>Dive into MySQL Error</a> <span>(40min)</span><br>
+                        yoku0825
+                      </td> <!----></tr><tr><th>16:50 ~ 17:10</th> <td rowspan="1" class=""><a>多くのCPAN Authorに育てられ、息をするようにCPANモジュールを書けるようになり、そして分かったこと</a> <span>(20min)</span><br>
+                        Songmu
+                      </td><td rowspan="1" class=""><a>10年モノ熟成Perlその後</a> <span>(20min)</span><br>
+                        ikasam_a
+                      </td><!----> <!----></tr> <tr><th>17:10 ~ 17:20</th> <td colspan="3"></td></tr> <tr><th>17:20 ~ 17:50</th> <td>
+                        Lightning Talks (30min)<br> <ol><li class="even">Shuya Motouchi</li> <li class="odd">OGATA Tetsuji</li> <li class="even">aereal</li> <li class="odd">八雲アナグラ</li> <li class="even">門松宏明 / note103</li> <li class="last odd">moznion</li></ol></td> <td colspan="2"></td></tr> <tr><th>17:50 ~ 18:00</th> <td colspan="3"></td></tr> <tr><th>18:00 ~ 18:40</th> <td><a href="./#guest-speakers">Keynote: 松野 徳大</a> (40min)<br></td> <td colspan="2"></td></tr> <tr><th>18:40 ~ 18:50</th> <td>Closing</td> <td colspan="2"></td></tr></tbody></table></div>
   </body>
 </html>
